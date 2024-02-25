@@ -3,7 +3,7 @@
 
 // named IIFE
 (function code(){
-    console.log(`DB Connected`);
+    console.log(`DB Connected!`);
 })();       //use semi colon when you use two IIFE
 
 //unnamed IIFE with an arrow function
