@@ -38,3 +38,41 @@ function loginUserMessage(username = "Unknown user"){    // A default username i
 
 console.log(loginUserMessage());        // prints default argument
 console.log(loginUserMessage("Tanya"));
+
+
+// spread operator in function is used to take multiple arguments
+function calculateCartPrice(val1, val2, ...num1){
+    return num1     // num1 returns all the values given after val1 and val2
+}
+
+console.log(calculateCartPrice(200, 400, 700, 3000));
+
+// ******** PASSING OBJECT AS AN ARGUMENT IN A FUNCTION
+
+const user = {
+    name: 'Tanya',
+    age:  21
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.name} and age of user is ${anyObject.age}.`);
+}
+
+handleObject(user)
+
+// Passing object directly
+handleObject({
+    name: "Tia",
+    age: 23
+})
+
+
+// function with objects
+const myNewArray = [3, 7, 9, 11]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+console.log("Using function by sending argument: ", returnSecondValue(myNewArray));
+console.log("Using function by sending values directly: ", returnSecondValue([5, 2, 6, 4]));
